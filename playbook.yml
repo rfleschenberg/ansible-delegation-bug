@@ -4,4 +4,3 @@
       shell: ls
       delegate_to: "{{ item }}"
       with_items: "{{ groups.other }}"
-      delegate_facts: True
