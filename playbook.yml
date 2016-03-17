@@ -1,5 +1,6 @@
 # Adjust for your hostnames, run this playbook with -vvvv and look at the SSH
-# connections ansible makes.
+# connections ansible makes. The delegated tasks run on the first host of the
+# list, two times.
 
 - hosts: main
   tasks:
@@ -7,12 +8,6 @@
       shell: ls
       delegate_to: "{{ item }}"
       with_items: "{{ groups.other }}"
-    - name: broken, too
-      shell: ls
-      delegate_to: "{{ item }}"
-      with_items:
-        - aron.fritz.box
-        - ben.fritz.box
     - name: broken, too
       shell: ls
       delegate_to: "{{ item }}"
