@@ -1,0 +1,7 @@
+- hosts: main
+  tasks:
+    - name: output hostname
+      debug:
+        msg: "{{ ansible_fqdn }}"
+      delegate_to: "{{ item }}"
+      with_items: "{{ groups.other }}"

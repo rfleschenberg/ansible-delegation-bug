@@ -1,0 +1,6 @@
+[main]
+afslinux.fritz.box ansible_ssh_user=root
+
+[other]
+aron.fritz.box ansible_ssh_user=root
+ben.fritz.box ansible_ssh_user=root
