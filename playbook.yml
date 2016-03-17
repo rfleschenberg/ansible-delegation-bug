@@ -1,6 +1,6 @@
 - hosts: main
   tasks:
-    - name: test
+    - name: broken
       shell: ls
       delegate_to: "{{ item }}"
       with_items: "{{ groups.other }}"
